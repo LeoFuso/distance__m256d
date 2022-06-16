@@ -6,9 +6,7 @@ I've built this lib to benchmark different distance measures operations using so
 ## Build process
 
 ``` bash
-$ mkdir build
-$ cd build
-$ cmake ..
-$ make
+$ cmake -S . -B build
+$ cmake --build build
+$ (Optional) sudo cmake -- install build
 ```
-

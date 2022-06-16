@@ -1,4 +1,4 @@
-#include "distance__m256d.h"
+#include <../include/distance__m256d.h>
 
 inline double mm256_rdcsd_f64(__m256d a)
 {
@@ -43,7 +43,7 @@ euclidean(const double *p, const double *q, unsigned long n)
             result += num * num;
         }
     }
-    return sqrt(result);
+    return result;
 }
 #pragma clang diagnostic pop
 
@@ -133,7 +133,10 @@ manhattan(const double *p, const double *q, unsigned long n)
     {
         for (int i = 0; i < n; ++i)
         {
-            const double num = fabs(p[i] - q[i]);
+            double num = (p[i] - q[i]);
+            if(num < 0) {
+                num*=-1;
+            }
             result += num;
         }
     }
