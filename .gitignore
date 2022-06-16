@@ -1,0 +1,18 @@
+# Covers JetBrains IDEs: CLion
+# Reference: https://intellij-support.jetbrains.com/hc/en-us/articles/206544839
+
+# User-specific stuff:
+.idea/
+
+# CMake
+cmake-build-debug/**
+cmake-build-debug-*/**
+cmake-build-release/**
+cmake-build-default/**
+CMakeFiles/**
+build/**
+
+# Libraries and objects binaries
+*.o
+*.so
+*.a
