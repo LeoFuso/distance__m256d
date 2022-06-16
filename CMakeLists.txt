@@ -9,7 +9,7 @@ project(
         Distance__m25d
         VERSION 0.2
         DESCRIPTION "A lib to benchmark different distance measures operations using some ___m256d_ vector functions"
-        LANGUAGES CXX)
+        LANGUAGES CXX C)
 
 # Only do these if this is the main project, and not if it is included through add_subdirectory
 if(CMAKE_PROJECT_NAME STREQUAL PROJECT_NAME)

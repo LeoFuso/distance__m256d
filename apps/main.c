@@ -1,16 +1,15 @@
 #pragma clang diagnostic push
 #pragma ide diagnostic ignored "cert-msc50-cpp"
 #pragma ide diagnostic ignored "cert-msc51-cpp"
-
-#include <cstdio>
+#include <stdio.h>
 #include <../include/distance__m256d.h>
-#include <cstdlib>
+#include <stdlib.h>
 
 int main() {
 
-    unsigned long array_size = 100;
-    auto * x = (double *) aligned_alloc(32, array_size * sizeof(double));
-    auto * y = (double *) aligned_alloc(32, array_size * sizeof(double));
+    unsigned long array_size = 10;
+    double * x = (double *) aligned_alloc(32, array_size * sizeof(double));
+    double * y = (double *) aligned_alloc(32, array_size * sizeof(double));
 
     srand(3);
     for (unsigned int i = 0; i < array_size; i++) {
