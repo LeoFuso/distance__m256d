@@ -8,5 +8,16 @@ I've built this lib to benchmark different distance measures operations using so
 ``` bash
 $ cmake -S . -B build
 $ cmake --build build
-$ (Optional) sudo cmake -- install build
+```
+
+## Installing
+``` bash
+$ sudo cmake -- install build
+```
+
+## Running
+``` bash
+$ sudo cmake -- install build
+$ ./build/apps/runner
+$ valgrind -v --leak-check=full ./build/apps/runner
 ```
