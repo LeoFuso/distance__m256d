@@ -8,8 +8,13 @@ set(CXXFLAGS_AVX2 "-O3 -march=native -mavx2")
 file(GLOB HEADER_LIST CONFIGURE_DEPENDS "${Distance__m25d_SOURCE_DIR}/include/*.h")
 
 # Make an automatic library - will be static or dynamic based on user setting
-add_library(distance__m256d STATIC distance__m256d.cpp ${HEADER_LIST})
+add_library(distance__m256d SHARED distance__m256d.cpp ${HEADER_LIST})
 set_property(TARGET distance__m256d PROPERTY COMPILE_FLAGS ${CXXFLAGS_AVX2})
+
+find_library(MATH_LIBRARY m)
+if(MATH_LIBRARY)
+    target_link_libraries(distance__m256d PRIVATE ${MATH_LIBRARY})
+endif()
 
 # We need this directory, and users of our library will need it too
 target_include_directories(distance__m256d PUBLIC ../include)

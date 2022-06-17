@@ -17,3 +17,11 @@ $ valgrind -v --leak-check=full ./build/apps/runner
 ``` bash
 $ sudo cmake -- install build
 ```
+
+## Standalone
+
+You can also try to compile `apps/main.c` directly:
+
+```bash
+$ gcc -I/usr/local/include main.c -o main -L/usr/local/lib -Wl,-R/usr/local/lib -ldistance__m256d
+```

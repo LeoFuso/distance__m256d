@@ -23,7 +23,7 @@ TEST_CASE("Quick check", "[main]") {
         result = euclidean(x, y, array_size);
     }
 
-    REQUIRE(result == 21065.0);
+    REQUIRE(result == Approx(145.137));
 
 }
 
